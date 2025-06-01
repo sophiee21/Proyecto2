@@ -1,24 +1,16 @@
-/*const url = fetch('https://the-vegan-recipes-db.p.rapidapi.com/45')*/
-const options = {
+
+const myData = fetch('https://ghibliapi.vercel.app/people');
+
+
+/*const options = {
 	method: 'GET',
 	headers: {
 		'x-rapidapi-key': '3ed6221904msh9afe7b0ad24b0f5p1cee26jsn74303a7952aa',
-		'x-rapidapi-host': 'the-vegan-recipes-db.p.rapidapi.com'
+		'x-rapidapi-host': 'studio-ghibli.p.rapidapi.com'
 	}
 };
 
-
-/*async function getData() {
-    try {
-        const response = await fetch(url, options)
-        const data = await response.json()
-        console.log(data)
-    } catch (error) {
-	    console.error(error)
-    }
-}*/
-
-const myData = fetch('https://the-vegan-recipes-db.p.rapidapi.com/', options)
+const myData =fetch('https://studio-ghibli.p.rapidapi.com/films',options);*/
 
 myData
     .then(response => response.json())
@@ -26,10 +18,10 @@ myData
         console.log(data)
     })
     .catch(err => {
-        console.error("Error: ≽^• ˕ • ྀི≼ ༘˚⋆𐙚｡⋆𖦹.✧˚")
+        console.error(err);
     })
 
-function makeCards (recipes){
+/*function makeCards (recipes){
     const {title, image}=recipes
     const cardsContainer =document.getElementById("cards-container");
 
@@ -42,10 +34,7 @@ function makeCards (recipes){
     cardsContainer.appendChild(card);
 }
 let i
-/* for (i=0 ; i < 9 ; i++){
-    makeCards(data[i]);
-} */
 
 console.log(window.location.href)
 const myURL = new URL(window.location.href)
-console.log(myURL.searchParams.get("postID"))
+console.log(myURL.searchParams.get("postID"))*/
