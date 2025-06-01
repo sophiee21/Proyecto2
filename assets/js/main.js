@@ -1,16 +1,6 @@
 
-const myData = fetch('https://ghibliapi.vercel.app/people');
+const myData = fetch('https://ghibliapi.vercel.app/films');
 
-
-/*const options = {
-	method: 'GET',
-	headers: {
-		'x-rapidapi-key': '3ed6221904msh9afe7b0ad24b0f5p1cee26jsn74303a7952aa',
-		'x-rapidapi-host': 'studio-ghibli.p.rapidapi.com'
-	}
-};
-
-const myData =fetch('https://studio-ghibli.p.rapidapi.com/films',options);*/
 
 myData
     .then(response => response.json())
