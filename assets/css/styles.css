@@ -70,3 +70,10 @@ table {
     height: 15em;
     
 }
+
+
+
+/*para probar que cargue la otra pagina*/
+.cards-container{
+	cursor: pointer;
+}

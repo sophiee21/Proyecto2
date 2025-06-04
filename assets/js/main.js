@@ -47,15 +47,34 @@ function makeCards (films){
 
 function pagcard(){
     //obtengo posicion del objeto clickeado dentro del array 
-    let posicion=this.getAttribute("id");//obtengo la id del objeto
+    
     //guardo id en localstorage asi se conserva la informacion
-    localStorage.setItem("posicion");
+    localStorage.setItem("posicion",this.getAttribute("id"));
     window.location.href="card"
 }
 
 
 /*--------------------PAGINA CARD---------------------*/
 //para que al momento de hacer click cargue la pag conservando los datos
+if(document.getElementById("info-cards")){
+const infocards=localStorage.getItem("id");
+
+
+
+
+
+
+
+//que pase luego de mostrar la informacion
+const remove=localStorage.removeItem("id")
+}
+
+
+
+
+
+
+
 
 
 
