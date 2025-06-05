@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZUKINI</title>
+    <title>Ghibli!!</title>
 
 <!--FUENTES-->
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400&display=swap" rel="stylesheet">
 
 <!--ICONOS-->
 
@@ -16,13 +18,28 @@
 
 </head>
 <body>
-    <header>
-        <h1>ZUKINI</h1>
+    <header class="flex-container background-index">
+        <div>
+            <a href="index.html"></a>
+            <img src="assets/images/studio-ghibli-logo.png" class="logo cursorPointer" alt="x">
+        </div>
+
+            <nav>
+                <div>
+                    <ul class="flex-container spbt">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="#">FILMS</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                    </ul>
+                </div>
+                
+            </nav>
     </header>
     <main>
+        
         <section>
             <div id="buscador-filtros"></div>
-            <div id="cards-container" class="flex-container spbt"></div>
+            <div id="cards-container" class="flex-container spbt flex-wrapW"></div>
         </section>
     </main>
     <footer>

@@ -56,6 +56,35 @@ table {
 
 /*termina el reset*/
 
+/*fuentes*/
+
+.zen-maru-gothic-light {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.zen-maru-gothic-regular {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/*header*/
+
+.logo{
+	width: 7em;
+}
+
+/*fondo*/
+
+.background-index{
+	background-image: url(../images/bg2-index.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 /*flexbox*/
 
 .flex-container{/*convierte al contenedor en flexible*/
@@ -66,14 +95,27 @@ table {
     justify-content: space-between;
 }
 
+.flex-wrapW{
+	flex-wrap: wrap;
+}
+
+
+/*estilo de las card*/
+
 .image-film{
     height: 15em;
     
 }
 
+/*colores*/
+
+.color-blanco{
+	color: #ffffff;
+}
+
 
 
 /*para probar que cargue la otra pagina*/
-.cards-container{
+.cursorPointer{
 	cursor: pointer;
 }
