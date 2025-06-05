@@ -48,8 +48,6 @@ table {
 
 *{
   box-sizing: border-box;
-  margin-left: 1.5em;
-  margin-right: 1.5em;
 }
 
 
@@ -70,6 +68,13 @@ table {
   font-style: normal;
 }
 
+.fontSize-5em{
+	font-size: 4em;
+}
+
+nav a{
+	color: #000000;
+}
 
 /*header*/
 
@@ -80,9 +85,15 @@ table {
 /*fondo*/
 
 .background-index{
-	background-image: url(../images/bg2-index.jpg);
+	background-image: url(../images/bg3-index.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center;
+	
+}
+
+header{
+	height: 30em;
 }
 
 /*flexbox*/
@@ -113,6 +124,27 @@ table {
 	color: #ffffff;
 }
 
+
+/*width*/
+
+.w20{
+	width: 35em;
+}
+
+/*margin Y padding*/
+
+.paddingLF-1-5{
+	padding-left: 1.5em;
+  	padding-right: 1.5em;
+}
+
+.marginT-7{
+	margin-top: 7em;
+}
+
+.marginT-1-5{
+	margin-top: 1.5em;
+}
 
 
 /*para probar que cargue la otra pagina*/

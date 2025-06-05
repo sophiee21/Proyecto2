@@ -37,7 +37,7 @@ function makeCards (films){
     card.setAttribute("class","cursorPointer");
     card.appendChild(imageFilm);
     card.appendChild(name);
-    card.appendChild(originalName);
+    //card.appendChild(originalName);
     
     //card.style.backgroundColor="blue";
 
