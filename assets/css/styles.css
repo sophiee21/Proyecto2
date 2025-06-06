@@ -29,6 +29,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-color: #f1e6e6;
 }
 ol, ul {
 	list-style: none;
@@ -68,6 +69,12 @@ table {
   font-style: normal;
 }
 
+.zen-maru-gothic-medium {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
 .fontSize-5em{
 	font-size: 4em;
 }
@@ -82,14 +89,14 @@ nav a{
 	width: 7em;
 }
 
+
+
 /*fondo*/
 
 .background-index{
-	background-image: url(../images/bg3-index.jpg);
-	background-repeat: no-repeat;
+	background: url('../images/bg3-index.jpg') rgba(255, 255, 255, 0.4);
+	background-blend-mode: lighten;
 	background-size: cover;
-	background-position: center;
-	
 }
 
 header{
@@ -113,9 +120,25 @@ header{
 
 /*estilo de las card*/
 
+.aa{
+	justify-content: center;
+	text-align: center;
+	display: flex;
+}
+
 .image-film{
     height: 15em;
-    
+	transition: 0.2s;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-style{
+	margin: 1em;
+}
+
+.image-film:hover{
+	height: 16em;
+	transition: 0.5s;
 }
 
 /*colores*/
@@ -131,11 +154,19 @@ header{
 	width: 35em;
 }
 
+.w10{
+	width: 10em;
+}
+
 /*margin Y padding*/
 
 .paddingLF-1-5{
 	padding-left: 1.5em;
   	padding-right: 1.5em;
+}
+
+.paddingT-0-5{
+	padding-top: 0.5em;
 }
 
 .marginT-7{
@@ -144,6 +175,15 @@ header{
 
 .marginT-1-5{
 	margin-top: 1.5em;
+}
+
+.marginR{
+	margin-right: 1em;
+}
+
+.tacenter{
+	display: flex;
+	align-items: center;
 }
 
 

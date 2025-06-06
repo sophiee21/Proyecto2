@@ -9,6 +9,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500&display=swap" rel="stylesheet">
 
 <!--ICONOS-->
 
@@ -19,15 +22,14 @@
 </head>
 <body>
     <header class="background-index paddingLF-1-5">
-        <div class="flex-container">
-            <a href="index.html"></a>
+        <div id="navv" class="flex-container spbt headerScroll paddingT-0-5">
             <img src="assets/images/studio-ghibli-logo.png" class="logo cursorPointer" alt="x">
         
-            <nav>
-                <div>
+            <nav class="tacenter">
+                <div class="flex-container">
                     <ul class="flex-container spbt zen-maru-gothic-regular">
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="#">FILMS</a></li>
+                        <li><a href="index.html" class="marginR">HOME</a></li>
+                        <li><a href="#" class="marginR">FILMS</a></li>
                         <li><a href="#">ABOUT</a></li>
                     </ul>
                 </div>
@@ -35,17 +37,16 @@
         </div>
 
         <div class="zen-maru-gothic-regular marginT-7">
-            <h1 class="fontSize-5em">Studio Ghibli</h1>
-            <p class="w20">Studio Ghibli, Inc. (株式会社スタジオジブリ Kabushiki-kaisha Sutajio Jiburi), known simply as Ghibli, is a Japanese animation film studio headquartered in Koganei, Tokyo. They were founded by Isao Takahata, Hayao Miyazaki, Toshio Suzuki, and Yasuyoshi Tokuma.</p>
-            <p class="w20">The company's logo features the character Totoro from Hayao Miyazaki's film My Neighbor Totoro.</p>
+            <h1 class="fontSize-5em zen-maru-gothic-medium">Studio Ghibli</h1>
+            <p class="w20 marginT-1-5">Studio Ghibli, Inc. (株式会社スタジオジブリ Kabushiki-kaisha Sutajio Jiburi), known simply as Ghibli, is a Japanese animation film studio headquartered in Koganei, Tokyo. They were founded by Isao Takahata, Hayao Miyazaki, Toshio Suzuki, and Yasuyoshi Tokuma.</p>
+            <p class="w20 marginT-1-5">The company's logo features the character Totoro from Hayao Miyazaki's film My Neighbor Totoro.</p>
         </div>
 
     </header>
     <main class="paddingLF-1-5 marginT-1-5">
         
-        <section>
-            <div id="buscador-filtros"></div>
-            <div id="cards-container" class="flex-container spbt flex-wrapW"></div>
+        <section class="aa">
+            <div id="cards-container" class="flex-container spbt flex-wrapW aa"></div>
         </section>
     </main>
     <footer>

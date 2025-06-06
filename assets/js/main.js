@@ -15,8 +15,10 @@ myData
         console.error(err);
     })
 
+
+
 function makeCards (films){
-    const {image, title, original_title,id}= films
+    const {image, title, original_title, id} = films
     const cardsContainer =document.getElementById("cards-container");
 
     const imageFilm=document.createElement("img");
@@ -24,27 +26,26 @@ function makeCards (films){
 
     const name=document.createElement("h3");
     name.textContent=title;
-    name.setAttribute("class","zen-maru-gothic-regular");
+    name.setAttribute("class","zen-maru-gothic-regular w10");
 
     const originalName=document.createElement("h4");
     originalName.textContent=original_title;
-    originalName.setAttribute("class","zen-maru-gothic-regular");
+    originalName.setAttribute("class","zen-maru-gothic-regular w10");
    
     imageFilm.setAttribute("class","image-film");
     const card=document.createElement("div");
      //le asigno la id de cada card para luego acceder a cada uno sin tener que hacer denuevo la llamada a la api
-    card.setAttribute("id",id)
-    card.setAttribute("class","cursorPointer");
+    card.setAttribute("id",id);
+    card.setAttribute("class","cursorPointer card-style");
     card.appendChild(imageFilm);
     card.appendChild(name);
-    //card.appendChild(originalName);
+    card.appendChild(originalName);
     
     //card.style.backgroundColor="blue";
 
    
     
     card.addEventListener("click",pagcard)
-    //
 
     cardsContainer.appendChild(card);
 }
@@ -54,6 +55,9 @@ function pagcard(){
     
     //guardo id en localstorage asi se conserva la informacion
     localStorage.setItem("posicion",this.getAttribute("id"));
+
+
+
     window.location.href="card.html"
 }
 
@@ -74,14 +78,60 @@ const remove=localStorage.removeItem("id")
 }
 
 
+/*prueba*/
+//creo una clase para los detalles y como parametro le doy los datos de la api
+/*
+class pelicula{
+    #titulo;
+    #imagen;
+    #tituloriginal;
+    #id;
+    constructor(titulo,imagen,tituloriginal,id, descripcion,director,productor,people,duracion){
+        this.#titulo=titulo;
+        this.#imagen=imagen;
+        this.#tituloriginal=tituloriginal;
+        this.#id=id;
+        this.#director=director;
+        this.#productor=productor;
+        this.#people=people;
+        this.#duracion=duracion;
+
+        cardDetalle(){
+        //creo los elementos de la segunda pagina
+        let titulopelicula=document.querySelector("");
+        titulopelicula.textContent=this.titulo;
+        let titleoriginal=document.querySelector("");
+        titleoriginal.textContent=this.tituloriginal;
+        let imagenpelicula=document.querySelector("");
+        imagenpelicula.innerHTML= this.imagen;
+        let descripcionpelicula=document.querySelector("");
+        descripcionpelicula.textContent= this.descripcion;
+         let directorpelicula=document.querySelector("");
+        directorpelicula.textContent=this.director;
+        let productorpelicula=document.querySelector("");
+        productorpelicula.textContent=productor;
+        let duracionpelicula=document.querySelector("");
+        duracion.textContent=duracion;
+        //agrego id
+        let identificacion=document.querySelector("");
+        identificacion.setAttribute("id",id);
+
+
+        }
+
+
+        
+
+
+    }
+    
 
 
 
+}
 
 
-
-
-
+*/
 
 
 
