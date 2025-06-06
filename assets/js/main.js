@@ -78,64 +78,6 @@ const remove=localStorage.removeItem("id")
 }
 
 
-/*prueba*/
-//creo una clase para los detalles y como parametro le doy los datos de la api
-/*
-class pelicula{
-    #titulo;
-    #imagen;
-    #tituloriginal;
-    #id;
-    constructor(titulo,imagen,tituloriginal,id, descripcion,director,productor,people,duracion){
-        this.#titulo=titulo;
-        this.#imagen=imagen;
-        this.#tituloriginal=tituloriginal;
-        this.#id=id;
-        this.#director=director;
-        this.#productor=productor;
-        this.#people=people;
-        this.#duracion=duracion;
-
-        cardDetalle(){
-        //creo los elementos de la segunda pagina
-        let titulopelicula=document.querySelector("");
-        titulopelicula.textContent=this.titulo;
-        let titleoriginal=document.querySelector("");
-        titleoriginal.textContent=this.tituloriginal;
-        let imagenpelicula=document.querySelector("");
-        imagenpelicula.innerHTML= this.imagen;
-        let descripcionpelicula=document.querySelector("");
-        descripcionpelicula.textContent= this.descripcion;
-         let directorpelicula=document.querySelector("");
-        directorpelicula.textContent=this.director;
-        let productorpelicula=document.querySelector("");
-        productorpelicula.textContent=productor;
-        let duracionpelicula=document.querySelector("");
-        duracion.textContent=duracion;
-        //agrego id
-        let identificacion=document.querySelector("");
-        identificacion.setAttribute("id",id);
-
-
-        }
-
-
-        
-
-
-    }
-    
-
-
-
-}
-
-
-*/
-
-
-
-
 
 /*
 console.log(window.location.href)
