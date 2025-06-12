@@ -1,9 +1,17 @@
 
+
+if(document.getElementById("indexx")){
 const myData = fetch('https://ghibliapi.vercel.app/films');
 
 
 myData
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            const messageError = document.getElementById("error-container");
+            messageError.textContent=response.status;
+            throw new Error("Estado: " + response.status); 
+        }
+        return response.json();})
     .then(data => {
 
         for(let i=0;i<data.length;i++){
@@ -12,10 +20,10 @@ myData
         console.log(data)
     })
     .catch(err => {
+        const messageError = document.getElementById("error-container");
+        messageError.textContent=err;
         console.error(err);
     })
-
-
 
 function makeCards (films){
     const {image, title, original_title, id} = films
@@ -34,48 +42,97 @@ function makeCards (films){
    
     imageFilm.setAttribute("class","image-film");
     const card=document.createElement("div");
-     //le asigno la id de cada card para luego acceder a cada uno sin tener que hacer denuevo la llamada a la api
     card.setAttribute("id",id);
-    card.setAttribute("class","cursorPointer card-style");
+    card.setAttribute("class","cursorPointer card-style animate__animated animate__zoomInLeft");
     card.appendChild(imageFilm);
     card.appendChild(name);
     card.appendChild(originalName);
-    
-    //card.style.backgroundColor="blue";
-
-   
-    
+    //card.style.backgroundColor="blue"; 
     card.addEventListener("click",pagcard)
-
     cardsContainer.appendChild(card);
 }
-
 function pagcard(){
-    //obtengo posicion del objeto clickeado dentro del array 
-    
-    //guardo id en localstorage asi se conserva la informacion
-    localStorage.setItem("posicion",this.getAttribute("id"));
-
-
-
-    window.location.href="card.html"
+    const idpelicula= this.getAttribute("id");
+    window.location.href=`card.html?id=${idpelicula}`
 }
-
-
+}
+/*window.addEventListener("load", () => {
+    const loader = document.getElementsByClassName("loader");
+    loader.setAttribute("class", "loader-hidden");
+   
+})*/
 /*--------------------PAGINA CARD---------------------*/
-//para que al momento de hacer click cargue la pag conservando los datos
-if(document.getElementById("info-cards")){
-const infocards=localStorage.getItem("id");
+
+if (document.getElementById("info-cards")) {
+    const myurl = 'https://ghibliapi.vercel.app/films';
+
+    function obtenerId() {
+        const param = window.location.search;
+        const urlparams = new URLSearchParams(param);
+        const valorid = urlparams.get('id');
+        return valorid;
+    }
+
+    async function obtenerdatos(id) {
+        if (!id) {
+            console.error("Error: no se obtuvo id de pelicula");
+            return;
+        }
+        try {
+            const response = await fetch(`${myurl}/${id}`);
+            if (!response.ok) {
+                const messageError = document.getElementById("error-container");
+                messageError.textContent = response.status;
+                throw new Error("Estado: " + response.status);
+            }
+            const data = await response.json();
+            return data;
+        } catch (err) {
+            const messageError = document.getElementById("error-container");
+            messageError.textContent = err;
+            console.error(err);
+        }
+    }
+
+    function infoFilms(films) {
+        const {image, title, original_title, director, producer, release_date, running_time, description,} = films;
+        const titleFilm = document.getElementById("title");
+        titleFilm.textContent = title;
+        const originalTitleFilm = document.getElementById("original-name");
+        originalTitleFilm.textContent = original_title;
+        const container = document.getElementById("image-film");
+        const imageFilm=document.createElement("img");
+        imageFilm.src=image;
+        container.appendChild(imageFilm)
+
+        const directorFilm = document.getElementById("director-name");
+        directorFilm.textContent = "Director: "+ director;
+        
+        const productorFilm = document.getElementById("producer-name");
+        productorFilm.textContent ="Producer: "+ producer;
+        const timeFilm = document.getElementById("run-time");
+        timeFilm.textContent = "Running time: "+ running_time;
+        const dateFilm = document.getElementById("relese-date");
+        dateFilm.textContent = "Release date: "+ release_date;
+        const descriptionFilm = document.getElementById("film-descripcion");
+        descriptionFilm.textContent = description;
+
+        
 
 
+        
+    }
 
-
-
-
-
-//que pase luego de mostrar la informacion
-const remove=localStorage.removeItem("id")
+    document.addEventListener("DOMContentLoaded", async () => {
+        const peliculaSeleccionada = obtenerId();
+        const detalles = await obtenerdatos(peliculaSeleccionada);
+        if (detalles) {
+            infoFilms(detalles);
+        }
+    });
 }
+
+
 
 
 

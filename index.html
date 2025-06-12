@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ghibli!!</title>
+    <title>Studio Ghibli !!</title>
 
 <!--FUENTES-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,24 +13,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500&display=swap" rel="stylesheet">
 
-<!--ICONOS-->
-
+<!--ANIMACIONES-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 <!-- carpeta de estilos -->
 <link rel="stylesheet" href="assets/css/styles.css">  
 
 </head>
-<body>
-    <header class="background-index paddingLF-1-5">
-        <div id="navv" class="flex-container spbt headerScroll paddingT-0-5">
+<body id="indexx" class="animate__animated animate__fadeIn ">
+    <header class="background-index paddingLF-1-5 h-30">
+        <div class="flex-container spbt paddingT-0-5">
             <img src="assets/images/studio-ghibli-logo.png" class="logo cursorPointer" alt="x">
         
             <nav class="tacenter">
                 <div class="flex-container">
                     <ul class="flex-container spbt zen-maru-gothic-regular">
                         <li><a href="index.html" class="marginR">HOME</a></li>
-                        <li><a href="#" class="marginR">FILMS</a></li>
-                        <li><a href="#">ABOUT</a></li>
                     </ul>
                 </div>
             </nav>
@@ -44,13 +42,16 @@
 
     </header>
     <main class="paddingLF-1-5 marginT-1-5">
-        
-        <section class="aa">
-            <div id="cards-container" class="flex-container spbt flex-wrapW aa"></div>
+        <!--<div class="loader">
+            <div class="rueda"></div>
+        </div>-->
+        <section id="error-container"></section>
+        <section class="container">
+            <div id="cards-container" class="flex-container spbt flex-wrapW cards-display"></div>
         </section>
     </main>
-    <footer>
-
+    <footer class="c-91BACA marginT-1-5 flex-container ">
+        <img src="assets/images/footer-ghibli.png" class="img-footer" alt="x">
     </footer>
     <script src="assets/js/main.js"></script>
 </body>
